@@ -28,8 +28,10 @@ app.post('/', (req, res) => {
     console.log(req.body)
 });
 
-app.listen(process.env.PORT,() => {
-    console.log('listening on port ' + process.env.PORT)
+let port = process.env.PORT;
+
+app.listen(port, () => {
+    console.log('listening on port ' + port)
 });
 
 async function shortenURL(input){
